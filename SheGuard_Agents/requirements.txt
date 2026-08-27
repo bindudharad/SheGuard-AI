@@ -1,0 +1,21 @@
+# SheGuard Agents - Core Dependencies
+opencv-python
+mediapipe==0.10.14
+ultralytics
+numpy
+torch
+scikit-learn
+joblib
+pydantic
+pydantic-settings
+pyyaml
+
+# API Dependencies
+fastapi
+uvicorn
+requests
+httpx
+
+# Testing
+pytest
+pytest-asyncio

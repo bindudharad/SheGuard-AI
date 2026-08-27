@@ -1,0 +1,16 @@
+SheGuard ML Training Report
+Version: 20260508_071628
+Best model: random_forest
+Best accuracy: 0.7500
+Samples: 59
+Classes: attack, fall, fight, normal
+
+Class distribution:
+- attack: 5
+- fall: 10
+- fight: 39
+- normal: 5
+
+Models:
+- random_forest: accuracy=0.7500
+- logistic_regression: accuracy=0.4167
