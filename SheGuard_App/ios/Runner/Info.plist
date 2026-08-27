@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>SheGuard</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>SheGuard uses live location during safety tracking and SOS emergencies.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SheGuard needs location access to send GPS updates to emergency contacts.</string>
+	<key>NSUserNotificationUsageDescription</key>
+	<string>SheGuard sends local safety and SOS status notifications.</string>
+</dict>
+</plist>

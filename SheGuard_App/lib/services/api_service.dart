@@ -1,0 +1,316 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:http/http.dart' as http;
+import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../config/api_config.dart';
+
+class ApiException implements Exception {
+  const ApiException(this.message, {this.statusCode});
+
+  final String message;
+  final int? statusCode;
+
+  @override
+  String toString() => message;
+}
+
+class ApiService {
+  ApiService({http.Client? client}) : _client = client ?? http.Client();
+
+  static const _storedBaseUrlKey = 'sheguard_local_base_url';
+
+  final http.Client _client;
+  String? _authToken;
+
+  static String get baseUrl => ApiConfig.baseUrl;
+  String? get authToken => _authToken;
+
+  static const Duration apiTimeout = Duration(seconds: 30);
+
+  void setAuthToken(String? token) {
+    _authToken = token?.trim().isEmpty == true ? null : token;
+  }
+
+  Future<Uri> _uri(String path) async {
+    final baseUrl = await resolveLocalBaseUrl();
+    return Uri.parse('$baseUrl$path');
+  }
+
+  Map<String, String> get _headers {
+    return {
+      'Content-Type': 'application/json',
+      if (_authToken != null) 'Authorization': 'Bearer $_authToken',
+    };
+  }
+
+  Future<Map<String, dynamic>> getJson(String path) async {
+    final uri = await _uri(path);
+    debugPrint('[API] GET $uri');
+    try {
+      final response =
+          await _client.get(uri, headers: _headers).timeout(apiTimeout);
+      debugPrint('[API] GET $uri -> ${response.statusCode}');
+
+      return _decode(response);
+    } on SocketException catch (error) {
+      debugPrint('[API] Socket error GET $uri: $error');
+      throw const ApiException(
+        'No internet connection. Please check your network.',
+      );
+    } on TimeoutException catch (error) {
+      debugPrint('[API] Timeout GET $uri: $error');
+      throw const ApiException(
+        'SheGuard backend timed out.',
+      );
+    } on http.ClientException catch (error) {
+      debugPrint('[API] Client error GET $uri: $error');
+      throw const ApiException(
+        'Could not reach SheGuard backend.',
+      );
+    }
+  }
+
+  Future<dynamic> getAnyJson(String path) async {
+    final uri = await _uri(path);
+    debugPrint('[API] GET $uri');
+    try {
+      final response =
+          await _client.get(uri, headers: _headers).timeout(apiTimeout);
+      debugPrint('[API] GET $uri -> ${response.statusCode}');
+
+      return _decodeAny(response);
+    } on SocketException catch (error) {
+      debugPrint('[API] Socket error GET $uri: $error');
+      throw const ApiException(
+        'No internet connection. Please check your network.',
+      );
+    } on TimeoutException catch (error) {
+      debugPrint('[API] Timeout GET $uri: $error');
+      throw const ApiException(
+        'SheGuard backend timed out.',
+      );
+    } on http.ClientException catch (error) {
+      debugPrint('[API] Client error GET $uri: $error');
+      throw const ApiException(
+        'Could not reach SheGuard backend.',
+      );
+    }
+  }
+
+  Future<Map<String, dynamic>> postJson(
+    String path,
+    Map<String, dynamic> body,
+  ) async {
+    final uri = await _uri(path);
+    debugPrint('[API] POST $uri');
+    try {
+      final response = await _client
+          .post(
+            uri,
+            headers: _headers,
+            body: jsonEncode(body),
+          )
+          .timeout(apiTimeout);
+      debugPrint('[API] POST $uri -> ${response.statusCode}');
+
+      return _decode(response);
+    } on SocketException catch (error) {
+      debugPrint('[API] Socket error POST $uri: $error');
+      throw const ApiException(
+        'No internet connection. Please check your network.',
+      );
+    } on TimeoutException catch (error) {
+      debugPrint('[API] Timeout POST $uri: $error');
+      throw const ApiException(
+        'SheGuard backend timed out.',
+      );
+    } on http.ClientException catch (error) {
+      debugPrint('[API] Client error POST $uri: $error');
+      throw const ApiException(
+        'Could not reach SheGuard backend.',
+      );
+    }
+  }
+
+  Map<String, dynamic> _decode(http.Response response) {
+    final dynamic payload = _tryDecode(response.body);
+
+    if (response.statusCode >= 200 && response.statusCode < 300) {
+      if (payload is Map<String, dynamic>) {
+        return payload;
+      }
+
+      throw const ApiException(
+        'Unexpected response from SheGuard backend.',
+      );
+    }
+
+    final message = payload is Map<String, dynamic>
+        ? payload['detail']?.toString() ?? 'Request failed.'
+        : 'Request failed.';
+
+    throw ApiException(
+      message,
+      statusCode: response.statusCode,
+    );
+  }
+
+  dynamic _decodeAny(http.Response response) {
+    final dynamic payload = _tryDecode(response.body);
+
+    if (response.statusCode >= 200 && response.statusCode < 300) {
+      return payload;
+    }
+
+    final message = payload is Map<String, dynamic>
+        ? payload['detail']?.toString() ?? 'Request failed.'
+        : 'Request failed.';
+
+    throw ApiException(
+      message,
+      statusCode: response.statusCode,
+    );
+  }
+
+  dynamic _tryDecode(String body) {
+    if (body.isEmpty) {
+      return <String, dynamic>{};
+    }
+
+    try {
+      return jsonDecode(body);
+    } on FormatException {
+      throw const ApiException(
+        'Invalid response from SheGuard backend.',
+      );
+    }
+  }
+
+  Future<String> resolveLocalBaseUrl() async {
+    final configured = ApiConfig.baseUrl.trim();
+    debugPrint('[API] Using configured backend base URL: $configured');
+    if (configured.isEmpty) {
+      throw const ApiException('ApiConfig.baseUrl is empty.');
+    }
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_storedBaseUrlKey, configured);
+    return configured;
+  }
+
+  Future<bool> checkBackendHealth() async {
+    final base = await resolveLocalBaseUrl();
+    debugPrint('[API] Health check base URL: $base');
+    for (final path in const ['/health', '/']) {
+      final uri = Uri.parse('$base$path');
+      try {
+        debugPrint('[API] HEALTH GET $uri');
+        final response =
+            await _client.get(uri, headers: _headers).timeout(apiTimeout);
+        debugPrint(
+          '[API] HEALTH GET $uri -> ${response.statusCode}: ${response.body}',
+        );
+        if (response.statusCode >= 200 && response.statusCode < 300) {
+          return true;
+        }
+      } on SocketException catch (error) {
+        debugPrint('[API] Health socket error $uri: $error');
+        rethrow;
+      } on TimeoutException catch (error) {
+        debugPrint('[API] Health timeout $uri: $error');
+        rethrow;
+      } on http.ClientException catch (error) {
+        debugPrint('[API] Health client error $uri: $error');
+        rethrow;
+      }
+    }
+    return false;
+  }
+
+  Future<String?> publicTrackingUrl(String sessionId) async {
+    try {
+      final base = await resolveLocalBaseUrl();
+      final network = await getJson('/system/local-network');
+      final backendBase = network['base_url']?.toString();
+      final trackingBase = backendBase != null && backendBase.trim().isNotEmpty
+          ? backendBase
+          : base;
+      debugPrint('[NETWORK] Local tracking base URL: $trackingBase');
+      return '$trackingBase/track/$sessionId';
+    } catch (error) {
+      debugPrint('[NETWORK] Tracking URL discovery failed: $error');
+      return null;
+    }
+  }
+
+  Future<String?> publicMediaUrl(String? path) async {
+    if (path == null || path.trim().isEmpty) return null;
+    final normalizedPath = _publicUploadsPath(path);
+    final uri = Uri.tryParse(normalizedPath);
+    if (uri != null && uri.hasScheme && uri.scheme.startsWith('http')) {
+      return normalizedPath;
+    }
+    final base = await resolveLocalBaseUrl();
+    final publicPath =
+        normalizedPath.startsWith('/') ? normalizedPath : '/$normalizedPath';
+    return '$base$publicPath';
+  }
+
+  Future<Map<String, dynamic>?> publicJson(String? path) async {
+    final url = await publicMediaUrl(path);
+    if (url == null) return null;
+    try {
+      final response = await _client
+          .get(Uri.parse(url), headers: _headers)
+          .timeout(apiTimeout);
+      final payload = _decodeAny(response);
+      return payload is Map<String, dynamic> ? payload : null;
+    } on SocketException {
+      throw const ApiException(
+        'No internet connection. Please check your network.',
+      );
+    } on TimeoutException {
+      throw const ApiException(
+        'SheGuard backend timed out.',
+      );
+    } on http.ClientException {
+      throw const ApiException(
+        'Could not reach SheGuard backend.',
+      );
+    }
+  }
+
+  Future<Uri> websocketUri(
+    String path, {
+    Map<String, String?> query = const {},
+  }) async {
+    final base = await resolveLocalBaseUrl();
+    final baseUri = Uri.parse(base);
+    final params = <String, String>{
+      for (final entry in query.entries)
+        if (entry.value != null && entry.value!.trim().isNotEmpty)
+          entry.key: entry.value!,
+    };
+    return baseUri.replace(
+      scheme: baseUri.scheme == 'https' ? 'wss' : 'ws',
+      path: path,
+      queryParameters: params.isEmpty ? null : params,
+    );
+  }
+
+  static String _publicUploadsPath(String value) {
+    final normalized = value.trim().replaceAll('\\', '/');
+    final lower = normalized.toLowerCase();
+    final uploadsIndex = lower.indexOf('/uploads/');
+    if (uploadsIndex >= 0) {
+      return normalized.substring(uploadsIndex);
+    }
+    if (lower.startsWith('uploads/')) {
+      return '/$normalized';
+    }
+    return normalized;
+  }
+}
