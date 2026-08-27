@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: .
+    container_name: sheguard-backend
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./logs:/app/logs
+      - ./app/database:/app/app/database
+      - ./sheguard.db:/app/sheguard.db
+    environment:
+      - SHEGUARD_DB_PATH=/app/sheguard.db
+    restart: unless-stopped

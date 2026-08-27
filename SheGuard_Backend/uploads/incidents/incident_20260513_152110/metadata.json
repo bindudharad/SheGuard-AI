@@ -1,0 +1,33 @@
+{
+  "incident_id": "incident_20260513_152110",
+  "database_incident_id": 172,
+  "detection_type": "silent_sos",
+  "confidence": 1.0,
+  "timestamp": "2026-05-13T15:21:10.092875",
+  "frame_count": 0,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": 13.3505251,
+    "longitude": 77.1433555
+  },
+  "source_camera": null,
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": [
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)"
+    ]
+  },
+  "files": {
+    "frame_1": null,
+    "thumbnail": null,
+    "incident_video": null,
+    "frames": []
+  }
+}

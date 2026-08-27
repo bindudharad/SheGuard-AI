@@ -1,0 +1,10 @@
+{
+  "incident_id": "incident_20260513_173500",
+  "detection_type": "unconscious_person",
+  "confidence": 0.85,
+  "timestamp": "2026-05-13T12:04:56.062317+00:00",
+  "frame_count": 55,
+  "video_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_173500\\incident_video.mp4",
+  "detection_frame_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_173500\\detection_frame.jpg",
+  "thumbnail_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_173500\\thumbnail.jpg"
+}

@@ -1,0 +1,29 @@
+{
+  "incident_id": 100,
+  "timestamp": "2026-05-13T03:56:10.417138",
+  "incident_type": "fall_detection",
+  "confidence": 0.9,
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": true,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": true,
+    "errors": [
+      "{'ok': False, 'error_code': 400, 'description': 'Bad Request: IMAGE_PROCESS_FAILED'}"
+    ]
+  },
+  "files": {
+    "preview_image": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_035610\\thumbnail.jpg",
+    "video": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_035610\\incident_video.mp4",
+    "frames": [
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_035610\\frame_1.jpg"
+    ]
+  }
+}

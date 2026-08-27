@@ -1,0 +1,14 @@
+{
+  "incident_id": "incident_20260513_043559",
+  "detection_type": "fall",
+  "confidence": 0.91,
+  "timestamp": "2026-05-13T04:35:59.808691",
+  "frame_count": 0,
+  "video_path": null,
+  "files": {
+    "detection_frame": null,
+    "thumbnail": null,
+    "incident_video": null
+  },
+  "ai_metadata": {}
+}

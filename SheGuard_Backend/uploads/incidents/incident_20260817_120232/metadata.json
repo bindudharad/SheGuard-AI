@@ -1,0 +1,32 @@
+{
+  "incident_id": "incident_20260817_120232",
+  "database_incident_id": 177,
+  "detection_type": "fall",
+  "confidence": 0.9,
+  "timestamp": "2026-08-17T12:02:32.874474",
+  "frame_count": 100,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "test-camera",
+  "device_info": "SheGuard_AI main.py (HybridSafetySystem)",
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": [
+      "{'ok': False, 'error_code': 401, 'description': 'Unauthorized'}"
+    ]
+  },
+  "files": {
+    "frame_1": null,
+    "thumbnail": null,
+    "incident_video": null,
+    "frames": []
+  }
+}

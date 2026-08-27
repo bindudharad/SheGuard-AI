@@ -1,0 +1,31 @@
+{
+  "incident_id": "incident_20260513_100634",
+  "database_incident_id": 0,
+  "detection_type": "fall",
+  "confidence": 0.0,
+  "timestamp": "2026-05-13T10:06:34.261116",
+  "frame_count": 0,
+  "video_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_100634\\incident_video.mp4",
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "pytest_cam",
+  "device_info": "backend_evidence_manager",
+  "telegram_message_status": {
+    "enabled": false,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": []
+  },
+  "files": {
+    "detection_frame": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_100634\\thumbnail.jpg",
+    "thumbnail": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_100634\\thumbnail.jpg",
+    "incident_video": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_100634\\incident_video.mp4",
+    "frames": [
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_100634\\frame_1.jpg"
+    ]
+  }
+}

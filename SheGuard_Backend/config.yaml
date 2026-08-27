@@ -1,0 +1,50 @@
+runtime:
+  device: auto
+  frame_skip: 1
+  alert_cooldown_seconds: 30
+  incident_post_seconds: 30
+
+stability:
+  confidence_window: 8
+  ema_alpha: 0.35
+  trigger_confidence: 0.72
+  clear_confidence: 0.48
+  persistence_frames: 3
+  inactivity_seconds: 8
+  inactivity_motion_threshold: 9.0
+
+threat:
+  night_start_hour: 20
+  night_end_hour: 5
+  critical_threshold: 9
+  high_threshold: 7
+  medium_threshold: 4
+
+cloud_ai:
+  enabled: true
+  min_confidence: 0.78
+  min_threat_score: 5
+  providers:
+    - groq
+    - gemini
+    - openrouter
+  timeout_seconds: 15
+
+evidence:
+  image_dir: evidence/images
+  video_dir: evidence/videos
+  metadata_dir: evidence/metadata
+  pre_event_seconds: 30
+  post_event_seconds: 30
+  fps: 20.0
+  retention_days: 30
+
+security:
+  jwt_secret_env: SHEGUARD_JWT_SECRET
+  jwt_expire_minutes: 1440
+
+logging:
+  dir: logs
+  level: INFO
+
+cameras: []

@@ -1,0 +1,27 @@
+{
+  "incident_id": 99,
+  "timestamp": "2026-05-13T03:56:06.044802",
+  "incident_type": "unconscious_person",
+  "confidence": 0.9120000000000001,
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": false,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": []
+  },
+  "files": {
+    "preview_image": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_035722\\thumbnail.jpg",
+    "video": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_035722\\incident_video.mp4",
+    "frames": [
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_035722\\frame_1.jpg"
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "incident_id": "incident_20260513_130651",
+  "database_incident_id": 157,
+  "detection_type": "fall_detection",
+  "confidence": 0.9,
+  "timestamp": "2026-05-13T13:06:51.579427",
+  "frame_count": 0,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": true,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "photo_count": 0,
+    "video_count": 0,
+    "errors": [],
+    "responses": {
+      "finalizerTestMessage": {
+        "ok": true,
+        "status_code": 200,
+        "body": {
+          "ok": true,
+          "result": {
+            "message_id": 49,
+            "from": {
+              "id": 8906267843,
+              "is_bot": true,
+              "first_name": "SheGuard",
+              "username": "SheGuard_Ai_Bot"
+            },
+            "chat": {
+              "id": 5709004610,
+              "first_name": "Bindu",
+              "type": "private"
+            },
+            "date": 1778677629,
+            "text": "TEST ALERT FROM FINALIZER"
+          }
+        },
+        "error": ""
+      },
+      "sendMessage": {
+        "ok": true,
+        "status_code": 200,
+        "body": {
+          "ok": true,
+          "result": {
+            "message_id": 50,
+            "from": {
+              "id": 8906267843,
+              "is_bot": true,
+              "first_name": "SheGuard",
+              "username": "SheGuard_Ai_Bot"
+            },
+            "chat": {
+              "id": 5709004610,
+              "first_name": "Bindu",
+              "type": "private"
+            },
+            "date": 1778677630,
+            "text": "\ud83d\udea8 EMERGENCY ALERT\n\nPossible fall detection detected.\n\nConfidence: 90%\nTime: 01:06 PM\n\nLocation unavailable.\nImage unavailable.\nVideo unavailable.\n\nAI Summary: Local AI detected fall with confidence 0.90. Images: 0. Videos: 0."
+          }
+        },
+        "error": ""
+      }
+    }
+  },
+  "files": {
+    "frames": [],
+    "videos": [],
+    "thumbnail": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_130651\\thumbnail.jpg"
+  },
+  "session_finalized_at": "2026-05-13T13:07:13.901396"
+}

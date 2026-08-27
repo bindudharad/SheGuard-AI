@@ -1,0 +1,10 @@
+{
+  "incident_id": "incident_20260513_173451",
+  "detection_type": "fall_detection",
+  "confidence": 0.9,
+  "timestamp": "2026-05-13T12:04:51.039243+00:00",
+  "frame_count": 62,
+  "video_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_173451\\incident_video.mp4",
+  "detection_frame_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_173451\\detection_frame.jpg",
+  "thumbnail_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_173451\\thumbnail.jpg"
+}

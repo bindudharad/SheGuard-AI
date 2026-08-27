@@ -1,0 +1,87 @@
+{
+  "incident_id": "incident_20260513_183908",
+  "database_incident_id": 160,
+  "detection_type": "violence_detection",
+  "confidence": 0.7999597134747316,
+  "timestamp": "2026-05-13T13:10:52.229198",
+  "frame_count": 3,
+  "video_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\incident_video.mp4",
+  "image_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\frame_1.jpg",
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "photo_count": 0,
+    "video_count": 0,
+    "errors": [
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendMessage (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendMessage (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendPhoto (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendPhoto (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendPhoto (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendPhoto (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendVideo (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendVideo (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+    ],
+    "responses": {
+      "finalizerTestMessage": {
+        "ok": false,
+        "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendMessage (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "sendMessage": {
+        "ok": false,
+        "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendMessage (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "sendPhoto": [
+        {
+          "ok": false,
+          "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendPhoto (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "ok": false,
+          "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendPhoto (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "ok": false,
+          "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendPhoto (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "ok": false,
+          "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendPhoto (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+        }
+      ],
+      "sendVideo": [
+        {
+          "ok": false,
+          "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendVideo (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "ok": false,
+          "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendVideo (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+        }
+      ]
+    }
+  },
+  "files": {
+    "frames": [
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\frame_1.jpg",
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\frame_2.jpg",
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\frame_3.jpg",
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\thumbnail.jpg"
+    ],
+    "videos": [
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\incident_video.mp4",
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\clip_1.mp4"
+    ],
+    "thumbnail": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_183908\\thumbnail.jpg"
+  },
+  "session_finalized_at": "2026-05-13T13:10:56.811283"
+}

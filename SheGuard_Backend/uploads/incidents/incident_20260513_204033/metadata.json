@@ -1,0 +1,231 @@
+{
+  "incident_id": "incident_20260513_151052",
+  "database_incident_id": 169,
+  "detection_type": "violence_detection",
+  "confidence": 0.7635980479160166,
+  "timestamp": "2026-05-13T15:10:52.780409",
+  "frame_count": 2,
+  "video_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_204033\\incident_video.mp4",
+  "image_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_204033\\frame_1.jpg",
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": true,
+    "location_sent": false,
+    "photo_sent": true,
+    "video_sent": true,
+    "photo_count": 2,
+    "video_count": 1,
+    "errors": [],
+    "responses": {
+      "finalizerTestMessage": {
+        "ok": true,
+        "status_code": 200,
+        "body": {
+          "ok": true,
+          "result": {
+            "message_id": 103,
+            "from": {
+              "id": 8906267843,
+              "is_bot": true,
+              "first_name": "SheGuard",
+              "username": "SheGuard_Ai_Bot"
+            },
+            "chat": {
+              "id": 5709004610,
+              "first_name": "Bindu",
+              "type": "private"
+            },
+            "date": 1778685058,
+            "text": "TEST ALERT FROM FINALIZER"
+          }
+        },
+        "error": ""
+      },
+      "sendMessage": {
+        "ok": true,
+        "status_code": 200,
+        "body": {
+          "ok": true,
+          "result": {
+            "message_id": 104,
+            "from": {
+              "id": 8906267843,
+              "is_bot": true,
+              "first_name": "SheGuard",
+              "username": "SheGuard_Ai_Bot"
+            },
+            "chat": {
+              "id": 5709004610,
+              "first_name": "Bindu",
+              "type": "private"
+            },
+            "date": 1778685059,
+            "text": "\ud83d\udea8 EMERGENCY ALERT\n\nPossible violence detection detected.\n\nConfidence: 76%\nTime: 03:10 PM\n\nLocation unavailable.\nImage attached.\nVideo attached.\n\nAI Summary: Local AI detected fight with confidence 0.76. Images: 2. Videos: 1."
+          }
+        },
+        "error": ""
+      },
+      "sendPhoto": [
+        {
+          "ok": true,
+          "status_code": 200,
+          "body": {
+            "ok": true,
+            "result": {
+              "message_id": 105,
+              "from": {
+                "id": 8906267843,
+                "is_bot": true,
+                "first_name": "SheGuard",
+                "username": "SheGuard_Ai_Bot"
+              },
+              "chat": {
+                "id": 5709004610,
+                "first_name": "Bindu",
+                "type": "private"
+              },
+              "date": 1778685062,
+              "photo": [
+                {
+                  "file_id": "AgACAgUAAxkDAANpagSUhsYTJVtPeKtFXRziM2ltep0AAuISaxvDaihUJy6urCszGr8BAAMCAANzAAM7BA",
+                  "file_unique_id": "AQAD4hJrG8NqKFR4",
+                  "file_size": 1042,
+                  "width": 90,
+                  "height": 67
+                },
+                {
+                  "file_id": "AgACAgUAAxkDAANpagSUhsYTJVtPeKtFXRziM2ltep0AAuISaxvDaihUJy6urCszGr8BAAMCAANtAAM7BA",
+                  "file_unique_id": "AQAD4hJrG8NqKFRy",
+                  "file_size": 14092,
+                  "width": 320,
+                  "height": 240
+                },
+                {
+                  "file_id": "AgACAgUAAxkDAANpagSUhsYTJVtPeKtFXRziM2ltep0AAuISaxvDaihUJy6urCszGr8BAAMCAAN4AAM7BA",
+                  "file_unique_id": "AQAD4hJrG8NqKFR9",
+                  "file_size": 54635,
+                  "width": 640,
+                  "height": 480
+                }
+              ]
+            }
+          },
+          "error": ""
+        },
+        {
+          "ok": true,
+          "status_code": 200,
+          "body": {
+            "ok": true,
+            "result": {
+              "message_id": 106,
+              "from": {
+                "id": 8906267843,
+                "is_bot": true,
+                "first_name": "SheGuard",
+                "username": "SheGuard_Ai_Bot"
+              },
+              "chat": {
+                "id": 5709004610,
+                "first_name": "Bindu",
+                "type": "private"
+              },
+              "date": 1778685064,
+              "photo": [
+                {
+                  "file_id": "AgACAgUAAxkDAANqagSUiGsqHsgxTPvRgmfyjgcfV_sAAuMSaxvDaihUjw1yadBoaiABAAMCAANzAAM7BA",
+                  "file_unique_id": "AQAD4xJrG8NqKFR4",
+                  "file_size": 1086,
+                  "width": 90,
+                  "height": 67
+                },
+                {
+                  "file_id": "AgACAgUAAxkDAANqagSUiGsqHsgxTPvRgmfyjgcfV_sAAuMSaxvDaihUjw1yadBoaiABAAMCAANtAAM7BA",
+                  "file_unique_id": "AQAD4xJrG8NqKFRy",
+                  "file_size": 13812,
+                  "width": 320,
+                  "height": 240
+                },
+                {
+                  "file_id": "AgACAgUAAxkDAANqagSUiGsqHsgxTPvRgmfyjgcfV_sAAuMSaxvDaihUjw1yadBoaiABAAMCAAN4AAM7BA",
+                  "file_unique_id": "AQAD4xJrG8NqKFR9",
+                  "file_size": 51725,
+                  "width": 640,
+                  "height": 480
+                }
+              ]
+            }
+          },
+          "error": ""
+        }
+      ],
+      "sendVideo": [
+        {
+          "ok": true,
+          "status_code": 200,
+          "body": {
+            "ok": true,
+            "result": {
+              "message_id": 107,
+              "from": {
+                "id": 8906267843,
+                "is_bot": true,
+                "first_name": "SheGuard",
+                "username": "SheGuard_Ai_Bot"
+              },
+              "chat": {
+                "id": 5709004610,
+                "first_name": "Bindu",
+                "type": "private"
+              },
+              "date": 1778685072,
+              "video": {
+                "duration": 3,
+                "width": 640,
+                "height": 480,
+                "file_name": "incident_video.mp4",
+                "mime_type": "video/mp4",
+                "thumbnail": {
+                  "file_id": "AAMCBQADGQMAA2tqBJSQyac58sH-UFERuN9TpjkqyQACJR4AAsNqKFSav_GcYWF34gEAB20AAzsE",
+                  "file_unique_id": "AQADJR4AAsNqKFRy",
+                  "file_size": 12337,
+                  "width": 320,
+                  "height": 240
+                },
+                "thumb": {
+                  "file_id": "AAMCBQADGQMAA2tqBJSQyac58sH-UFERuN9TpjkqyQACJR4AAsNqKFSav_GcYWF34gEAB20AAzsE",
+                  "file_unique_id": "AQADJR4AAsNqKFRy",
+                  "file_size": 12337,
+                  "width": 320,
+                  "height": 240
+                },
+                "file_id": "BAACAgUAAxkDAANragSUkMmnOfLB_lBREbjfU6Y5KskAAiUeAALDaihUmr_xnGFhd-I7BA",
+                "file_unique_id": "AgADJR4AAsNqKFQ",
+                "file_size": 1011336
+              },
+              "caption": "SheGuard emergency evidence video"
+            }
+          },
+          "error": ""
+        }
+      ]
+    }
+  },
+  "files": {
+    "frames": [
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_204033\\frame_1.jpg",
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_204033\\frame_2.jpg"
+    ],
+    "videos": [
+      "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_204033\\incident_video.mp4"
+    ],
+    "thumbnail": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_151052\\thumbnail.jpg"
+  },
+  "session_finalized_at": "2026-05-13T15:11:16.177546"
+}

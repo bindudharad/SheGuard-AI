@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+python-dotenv
+pydantic
+python-multipart
+requests
+httpx
+opencv-python
+PyYAML
+qrcode[pil]
+groq
+torch

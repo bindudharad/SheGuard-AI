@@ -1,0 +1,10 @@
+{
+  "incident_id": "incident_20260513_195911",
+  "detection_type": "violence_detection",
+  "confidence": 0.860401755173696,
+  "timestamp": "2026-05-13T14:29:11.469100+00:00",
+  "frame_count": 59,
+  "video_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_195911\\incident_video.mp4",
+  "detection_frame_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_195911\\frame_1.jpg",
+  "thumbnail_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_195911\\thumbnail.jpg"
+}

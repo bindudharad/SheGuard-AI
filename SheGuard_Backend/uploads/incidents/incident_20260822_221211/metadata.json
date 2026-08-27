@@ -1,0 +1,33 @@
+{
+  "incident_id": "incident_20260822_221211",
+  "database_incident_id": 21,
+  "detection_type": "assault",
+  "confidence": 0.9,
+  "timestamp": "2026-08-22T22:12:11.608436",
+  "frame_count": 0,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": 12.97,
+    "longitude": 77.59
+  },
+  "source_camera": "test_cam",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": [
+      "{'ok': False, 'error_code': 401, 'description': 'Unauthorized'}",
+      "{'ok': False, 'error_code': 401, 'description': 'Unauthorized'}"
+    ]
+  },
+  "files": {
+    "frame_1": null,
+    "thumbnail": null,
+    "incident_video": null,
+    "frames": []
+  }
+}

@@ -1,0 +1,18 @@
+import sqlite3
+conn = sqlite3.connect('sheguard.db')
+cursor = conn.cursor()
+cursor.execute('SELECT password_hash FROM users WHERE phone_number = ?', ('9999999999',))
+result = cursor.fetchone()
+conn.close()
+hash = result[0]
+print('Raw hash:', repr(hash))
+parts = hash.split('\$', 2)
+print('Split with escaped:', parts)
+parts2 = hash.split('\$', 2)
+print('Split with literal:', parts2)
+parts3 = hash.split('\$', 2)
+print('Split with single:', parts3)
+parts4 = hash.split('\$', 2)
+print('Split with single literal:', parts4)
+parts5 = hash.split('\$', 2)
+print('Split with single literal 2:', parts5)

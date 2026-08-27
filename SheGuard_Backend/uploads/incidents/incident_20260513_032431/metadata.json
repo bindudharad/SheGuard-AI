@@ -1,0 +1,25 @@
+{
+  "incident_id": 83,
+  "timestamp": "2026-05-13T03:24:31.250446",
+  "incident_type": "fall",
+  "confidence": 0.9,
+  "gps": {
+    "latitude": 12.9716,
+    "longitude": 77.5946
+  },
+  "source_camera": null,
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": false,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": []
+  },
+  "files": {
+    "preview_image": null,
+    "video": null,
+    "frames": []
+  }
+}

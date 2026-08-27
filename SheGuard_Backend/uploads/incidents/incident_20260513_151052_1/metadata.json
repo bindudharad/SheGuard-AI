@@ -1,0 +1,30 @@
+{
+  "incident_id": "incident_20260513_151052_1",
+  "database_incident_id": 169,
+  "detection_type": "violence_detection",
+  "confidence": 0.7635980479160166,
+  "timestamp": "2026-05-13T15:10:52.356940",
+  "frame_count": 0,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": false,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": []
+  },
+  "files": {
+    "frame_1": null,
+    "thumbnail": null,
+    "incident_video": null,
+    "frames": []
+  }
+}

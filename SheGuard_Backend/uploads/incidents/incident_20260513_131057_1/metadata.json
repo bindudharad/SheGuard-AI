@@ -1,0 +1,45 @@
+{
+  "incident_id": "incident_20260513_131057",
+  "database_incident_id": 161,
+  "detection_type": "fall_detection",
+  "confidence": 0.9,
+  "timestamp": "2026-05-13T13:10:57.311229",
+  "frame_count": 0,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "photo_count": 0,
+    "video_count": 0,
+    "errors": [
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendMessage (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))",
+      "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendMessage (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+    ],
+    "responses": {
+      "finalizerTestMessage": {
+        "ok": false,
+        "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendMessage (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      "sendMessage": {
+        "ok": false,
+        "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8906267843:AAG5Psy7AnQXEdAWKSiDZDwNfgfbKdOSycU/sendMessage (Caused by NameResolutionError(\"HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+      }
+    }
+  },
+  "files": {
+    "frames": [],
+    "videos": [],
+    "thumbnail": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_131057\\thumbnail.jpg"
+  },
+  "session_finalized_at": "2026-05-13T14:02:03.281855"
+}

@@ -1,0 +1,82 @@
+{
+  "incident_id": "incident_20260513_130315",
+  "database_incident_id": 155,
+  "detection_type": "violence_detection",
+  "confidence": 0.8670921456494692,
+  "timestamp": "2026-05-13T13:03:15.905270",
+  "frame_count": 0,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": true,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "photo_count": 0,
+    "video_count": 0,
+    "errors": [],
+    "responses": {
+      "finalizerTestMessage": {
+        "ok": true,
+        "status_code": 200,
+        "body": {
+          "ok": true,
+          "result": {
+            "message_id": 37,
+            "from": {
+              "id": 8906267843,
+              "is_bot": true,
+              "first_name": "SheGuard",
+              "username": "SheGuard_Ai_Bot"
+            },
+            "chat": {
+              "id": 5709004610,
+              "first_name": "Bindu",
+              "type": "private"
+            },
+            "date": 1778677414,
+            "text": "TEST ALERT FROM FINALIZER"
+          }
+        },
+        "error": ""
+      },
+      "sendMessage": {
+        "ok": true,
+        "status_code": 200,
+        "body": {
+          "ok": true,
+          "result": {
+            "message_id": 38,
+            "from": {
+              "id": 8906267843,
+              "is_bot": true,
+              "first_name": "SheGuard",
+              "username": "SheGuard_Ai_Bot"
+            },
+            "chat": {
+              "id": 5709004610,
+              "first_name": "Bindu",
+              "type": "private"
+            },
+            "date": 1778677416,
+            "text": "\ud83d\udea8 EMERGENCY ALERT\n\nPossible violence detection detected.\n\nConfidence: 87%\nTime: 01:03 PM\n\nLocation unavailable.\nImage unavailable.\nVideo unavailable.\n\nAI Summary: Local AI detected fight with confidence 0.89. Images: 0. Videos: 0."
+          }
+        },
+        "error": ""
+      }
+    }
+  },
+  "files": {
+    "frames": [],
+    "videos": [],
+    "thumbnail": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_130315\\thumbnail.jpg"
+  },
+  "session_finalized_at": "2026-05-13T13:03:39.545213"
+}

@@ -1,0 +1,30 @@
+{
+  "incident_id": "incident_20260822_232305_5",
+  "database_incident_id": 29,
+  "detection_type": "fall",
+  "confidence": 0.9,
+  "timestamp": "2026-08-22T23:22:59.967318",
+  "frame_count": 0,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": 12.9716,
+    "longitude": 77.5946
+  },
+  "source_camera": null,
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": false,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": []
+  },
+  "files": {
+    "frame_1": null,
+    "thumbnail": null,
+    "incident_video": null,
+    "frames": []
+  }
+}

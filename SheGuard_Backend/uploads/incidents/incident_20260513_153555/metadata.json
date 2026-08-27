@@ -1,0 +1,30 @@
+{
+  "incident_id": "incident_20260513_153555",
+  "database_incident_id": 174,
+  "detection_type": "silent_sos",
+  "confidence": 1.0,
+  "timestamp": "2026-05-13T15:35:55.878799",
+  "frame_count": 0,
+  "video_path": null,
+  "image_path": null,
+  "gps": {
+    "latitude": 13.3504921,
+    "longitude": 77.1433726
+  },
+  "source_camera": null,
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": true,
+    "message_sent": true,
+    "location_sent": true,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": []
+  },
+  "files": {
+    "frame_1": null,
+    "thumbnail": null,
+    "incident_video": null,
+    "frames": []
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "incident_id": "incident_20260513_101833",
+  "detection_type": "smoke",
+  "confidence": 0.99,
+  "timestamp": "2026-05-13T04:48:33.518116+00:00",
+  "frame_count": 19,
+  "video_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_101833\\incident_video.mp4",
+  "detection_frame_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_101833\\detection_frame.jpg",
+  "thumbnail_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260513_101833\\thumbnail.jpg"
+}

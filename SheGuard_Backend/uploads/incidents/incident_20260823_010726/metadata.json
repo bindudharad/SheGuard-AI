@@ -1,0 +1,13 @@
+{
+  "incident_id": 77,
+  "incident_type": "fall",
+  "confidence": 0.91,
+  "threat_score": 6,
+  "threat_level": "MEDIUM",
+  "camera_id": "demo_cctv_1",
+  "latitude": 13.351388,
+  "longitude": 77.141865,
+  "timestamp": "2026-08-23T01:07:26.282893",
+  "image_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260823_010726\\frame_1.jpg",
+  "video_path": "C:\\Programs\\codex\\SheGuard\\SheGuard_Backend\\uploads\\incidents\\incident_20260823_010726\\incident_video.mp4"
+}

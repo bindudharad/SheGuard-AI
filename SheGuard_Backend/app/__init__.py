@@ -1,0 +1,1 @@
+"""SheGuard backend application package."""

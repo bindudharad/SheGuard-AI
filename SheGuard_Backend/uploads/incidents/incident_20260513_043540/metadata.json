@@ -1,0 +1,28 @@
+{
+  "incident_id": 109,
+  "detection_type": "unconscious_person",
+  "confidence": 0.9120000000000001,
+  "timestamp": "2026-05-13T04:35:19.100267",
+  "frame_count": 0,
+  "video_path": null,
+  "gps": {
+    "latitude": null,
+    "longitude": null
+  },
+  "source_camera": "default-camera",
+  "device_info": null,
+  "telegram_message_status": {
+    "enabled": false,
+    "message_sent": false,
+    "location_sent": false,
+    "photo_sent": false,
+    "video_sent": false,
+    "errors": []
+  },
+  "files": {
+    "detection_frame": null,
+    "thumbnail": null,
+    "incident_video": null,
+    "frames": []
+  }
+}
