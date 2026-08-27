@@ -1,0 +1,57 @@
+# Protect .env files from being committed (keep real secrets out of git)
+.env
+**/.env
+!.env.example
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+**pycache__/
+*.pyc
+
+# Build outputs and distracts
+dist/
+build/
+.next/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Logs and runtime data
+logs/
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated/runtime data that is not source
+*.db
+*.sqlite3
+*.zip
+*.tar.gz
+*.tgz
+
+# Machine learning models and artifacts
+*.joblib
+*.pkl
+*.npy
+*.npz
+*.pt
+*.onnx
+
+# Reports and large generated files (these are project-specific and should be excluded)
+SHEGUARD_FULL_FILE_TREE.txt
+
+# Flutter/web build artifacts
+.build/
+.dart_tool/
+
+# Temp files
+temp_write.py
+temp_write
