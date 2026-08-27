@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    color: #f8fafc;
+    background:
+      radial-gradient(circle at top left, rgba(255, 46, 63, 0.16), transparent 34rem),
+      radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.11), transparent 24rem),
+      linear-gradient(135deg, #07090f 0%, #101522 45%, #080b12 100%);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/10 bg-white/[0.055] shadow-panel backdrop-blur-2xl;
+  }
+
+  .thin-scrollbar {
+    scrollbar-color: rgba(255, 46, 63, 0.55) rgba(255, 255, 255, 0.06);
+    scrollbar-width: thin;
+  }
+
+  .map-shell .leaflet-container {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    background: #0c1018;
+  }
+
+  .map-shell .leaflet-control-attribution {
+    background: rgba(7, 9, 15, 0.82);
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .map-shell .leaflet-popup-content-wrapper,
+  .map-shell .leaflet-popup-tip {
+    background: #101522;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
